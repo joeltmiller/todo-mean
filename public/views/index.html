@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html ng-app="todo">
+  <head>
+    <meta charset="utf-8">
+    <title>One MEAN App</title>
+    <script src="vendor/angular/angular.min.js"></script>
+    <script src="scripts/client.js"></script>
+    <link rel="stylesheet" href="vendor/bootstrap/dist/css/bootstrap.min.css" />
+  </head>
+  <body ng-controller="MainController as main">
+    <p>
+      <h5>Title</h5> <input type="text" ng-model="main.task.title"/>
+    </p>
+    <p>
+      <h5>Description</h5> <textarea class="form-control" rows="2" id="comment" ng-model="main.task.desc"></textarea>
+    </p>
+    <p>
+      <button class="btn btn-primary" ng-click="main.addTask()">Add</button>
+    </p>
+
+    <div ng-show="main.tasks.length > 0">
+      <h5>Tasks:</h5>
+
+      <ul>
+        <li ng-repeat="indv in main.tasks">
+          <div class="well">
+            <p>
+              Title: {{indv.title}}
+            </p>
+            <p>
+              Description: {{indv.desc}}
+            </p>
+            <button class="btn btn-danger" ng-click="main.removeTask(indv)"><span class="glyphicon glyphicon-ok-sign"></span></button>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+
+  </body>
+</html>
