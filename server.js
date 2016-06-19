@@ -7,14 +7,21 @@ var mongoose = require('mongoose');
 
 mongoose.connect('mongodb://localhost/newDatabase');
 
- 
+
 
 app.use(express.static('public'));
 app.use(bodyParser.json());
 app.use('/', index);
 app.use('/todo', todo);
 
-var server = app.listen(process.env.PORT || 3000, function () {
+// var server = app.listen(process.env.PORT || 3000, function () {
+  // var port = server.address().port;
+  // console.log('Listening on', port, 'press ctrl+c to terminate');
+// });
+
+var server = app.listen(3000, function () {
   var port = server.address().port;
-  console.log('Listening on', port, 'press ctrl+c to terminate');
+  console.log('Example app listening at port %s', port);
 });
+
+module.exports = server;
