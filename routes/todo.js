@@ -10,7 +10,8 @@ router.get('/', function (req, res) {
 });
 
 router.post('/', function (req, res) {
-  console.log('My stuff:', req.body);
+  var data = req.body;
+  data.created = new Date();
   task.create(req.body, function (err, thing) {
     res.send(thing);
   });
