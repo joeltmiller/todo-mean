@@ -18,7 +18,7 @@ module.exports = function(config) {
       'public/vendor/angular/angular.min.js',
       'node_modules/angular-mocks/angular-mocks.js',
       'public/scripts/client.js',
-      'test/*.js'
+      'test/mainControllerSpec.js'
     ],
 
 
