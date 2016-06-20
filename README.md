@@ -17,3 +17,5 @@ To run server-side tests
 ```
 $ mocha test/api.js
 ```
+
+**Make sure to have MongoDB running**
