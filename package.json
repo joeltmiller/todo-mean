@@ -11,9 +11,15 @@
   "license": "ISC",
   "dependencies": {
     "angular-mocks": "^1.5.7",
+    "body-parser": "^1.15.2",
     "chai": "^3.5.0",
     "express": "^4.14.0",
     "jasmine": "^2.4.1",
+    "jasmine-core": "^2.4.1",
+    "karma": "^0.13.22",
+    "karma-chrome-launcher": "^1.0.1",
+    "karma-cli": "^1.0.0",
+    "karma-jasmine": "^1.0.2",
     "mongoose": "^4.5.0",
     "supertest": "^1.2.0"
   }
